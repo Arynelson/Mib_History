@@ -238,6 +238,3 @@ Este projeto é de código aberto e está disponível sob a licença MIT.
 - Comunidade React por ferramentas incríveis
 - Cloudflare por infraestrutura edge moderna
 
----
-
-Feito com ❤️ para amantes de história
