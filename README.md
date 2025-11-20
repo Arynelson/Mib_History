@@ -1,13 +1,24 @@
 # MIB History - História Viva
 
-https://mib-history.vercel.app/
-
-![PWA Ready](https://img.shields.io/badge/PWA-Ready-success)
+[![Deploy](https://img.shields.io/badge/Deploy-Live-success?logo=vercel)](https://mib-history.vercel.app/)
+[![PWA Ready](https://img.shields.io/badge/PWA-Ready-success)](https://mib-history.vercel.app/)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue)
 ![React](https://img.shields.io/badge/React-19.0-61dafb)
 ![Vite](https://img.shields.io/badge/Vite-7.1-646cff)
 
 **História Viva** é um Progressive Web App (PWA) que permite descobrir fatos históricos fascinantes do dia de hoje e explorar a rica história dos lugares ao seu redor. Disponível em português, inglês e italiano.
+
+🌐 **[Acesse o App ao Vivo](https://mib-history.vercel.app/)**
+
+## 📸 Demo
+
+Visite o app em: **[mib-history.vercel.app](https://mib-history.vercel.app/)**
+
+- ✨ Interface moderna e intuitiva
+- 📱 Totalmente responsivo (mobile-first)
+- 🌙 Design com tema histórico elegante
+- ⚡ Carregamento instantâneo
+- 📡 Funciona offline após primeira visita
 
 ## ✨ Funcionalidades
 
@@ -40,10 +51,10 @@ https://mib-history.vercel.app/
 - **Vite 7.1** - Build tool ultrarrápido
 
 ### Backend/API
-- **Hono** - Framework web leve e rápido
-- **Cloudflare Workers** - Edge computing
+- **Vercel Serverless Functions** - Backend escalável e serverless
 - **Wikipedia API** - Dados históricos em tempo real
 - **Zod** - Validação de schemas
+- **Hono** - Framework web leve (suporte Cloudflare Workers)
 
 ### PWA
 - **Service Worker** - Cache offline e estratégias de rede
@@ -191,19 +202,27 @@ O app pode ser instalado em dispositivos mobile e desktop:
 
 ## 🚀 Deploy
 
-### Vercel (Recomendado para SPA)
+### Deploy em Produção
 
-1. Instale a CLI da Vercel:
+O app está em produção e disponível em:
+**🌐 [https://mib-history.vercel.app/](https://mib-history.vercel.app/)**
+
+### Fazer seu próprio deploy
+
+#### Vercel (Recomendado)
+
+1. Faça fork deste repositório
+2. Importe o projeto na [Vercel](https://vercel.com)
+3. A Vercel detectará automaticamente as configurações
+4. Clique em "Deploy"
+
+Ou via CLI:
 ```bash
 npm i -g vercel
-```
-
-2. Execute o deploy:
-```bash
 vercel
 ```
 
-### Cloudflare Pages
+#### Cloudflare Pages
 
 1. Faça build do projeto:
 ```bash
@@ -214,6 +233,8 @@ npm run build
 ```bash
 npx wrangler pages deploy dist
 ```
+
+**Nota**: Para Cloudflare Pages, as API routes precisarão ser adaptadas para usar Cloudflare Workers ao invés de Vercel Functions.
 
 ## 🤝 Contribuindo
 
